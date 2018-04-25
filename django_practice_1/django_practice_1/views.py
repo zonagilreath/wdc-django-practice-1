@@ -19,6 +19,22 @@ def current_date(request):
     return HttpResponse(dt.strftime('Today is %d, %B %Y'))
 
 
+def my_age(request, year, month, day):
+    """
+        Return a string with the format: 'Your age is X years old'
+        based on given /year/month/day datetime that come in the URL.
+
+        i.e: /my-age/1992/1/20 returns 'Your age is 26 years old'
+    """
+    try:
+        birthday = datetime(year=year, month=month, day=day)
+    except ValueError:
+        return HttpResponseBadRequest()
+
+    delta = datetime.now() - birthday
+    return HttpResponse("Your age is {} years old".format(int(delta.days / 365)))
+
+
 def next_birthday(request, birthday):
     """
         Return a string with the format: 'Days until next birthday: XYZ'
@@ -44,22 +60,6 @@ def next_birthday(request, birthday):
             year=today.year + 1, month=birthday.month, day=birthday.day)
         delta = birthday_next_year - today
     return HttpResponse("Days until next birthday: {}".format(delta.days + 1))
-
-
-def my_age(request, year, month, day):
-    """
-        Return a string with the format: 'Your age is X years old'
-        based on given /year/month/day datetime that come in the URL.
-
-        i.e: /my-age/1992/1/20 returns 'Your age is 26 years old'
-    """
-    try:
-        birthday = datetime(year=year, month=month, day=day)
-    except ValueError:
-        return HttpResponseBadRequest()
-
-    delta = datetime.now() - birthday
-    return HttpResponse("Your age is {} years old".format(int(delta.days / 365)))
 
 
 def profile(request):
@@ -105,6 +105,7 @@ AUTHORS_INFO = {
 
 def authors(request):
     return render(request, 'authors.html', context=AUTHORS_INFO)
+
 
 def author(request, authors_last_name):
     return render(request, 'author.html', context=AUTHORS_INFO[authors_last_name])
