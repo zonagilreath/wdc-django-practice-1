@@ -4,11 +4,13 @@ from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseBadRequest
 
 
+# Use /hello-world URL
 def hello_world(request):
     """Return a 'Hello World' string using HttpResponse"""
     pass
 
 
+# Use /date URL
 def current_date(request):
     """
         Return a string with current date using the datetime library.
@@ -18,6 +20,7 @@ def current_date(request):
     pass
 
 
+# Use URL with format /my-age/<year>/<month>/<day>
 def my_age(request, year, month, day):
     """
         Return a string with the format: 'Your age is X years old'
@@ -28,6 +31,7 @@ def my_age(request, year, month, day):
     pass
 
 
+# Use URL with format /next-birthday/<birthday>
 def next_birthday(request, birthday):
     """
         Return a string with the format: 'Days until next birthday: XYZ'
@@ -37,6 +41,7 @@ def next_birthday(request, birthday):
     pass
 
 
+# Use /profile URL
 def profile(request):
     """
         Render the 'profile.html' sending the context given below, using the
@@ -77,6 +82,7 @@ AUTHORS_INFO = {
     }
 }
 
+# Use provided URLs, don't change them
 def authors(request):
     pass
 
