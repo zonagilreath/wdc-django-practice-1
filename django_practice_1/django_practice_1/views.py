@@ -6,7 +6,7 @@ from django.http import HttpResponse, HttpResponseBadRequest
 
 def hello_world(request):
     """Return a 'Hello World' string using HttpResponse"""
-    return HttpResponse('Hello World')
+    pass
 
 
 def current_date(request):
@@ -15,8 +15,7 @@ def current_date(request):
 
         i.e: 'Today is 5, January 2018'
     """
-    dt = datetime.now()
-    return HttpResponse(dt.strftime('Today is %d, %B %Y'))
+    pass
 
 
 def my_age(request, year, month, day):
@@ -26,13 +25,7 @@ def my_age(request, year, month, day):
 
         i.e: /my-age/1992/1/20 returns 'Your age is 26 years old'
     """
-    try:
-        birthday = datetime(year=year, month=month, day=day)
-    except ValueError:
-        return HttpResponseBadRequest()
-
-    delta = datetime.now() - birthday
-    return HttpResponse("Your age is {} years old".format(int(delta.days / 365)))
+    pass
 
 
 def next_birthday(request, birthday):
@@ -41,25 +34,7 @@ def next_birthday(request, birthday):
         based on a given string GET parameter that comes in the URL, with the
         format 'YYYY-MM-DD'
     """
-    try:
-        # parse string format birthday to datetime object
-        format_str = '%Y-%m-%d'
-        birthday = datetime.strptime(birthday, format_str)
-    except ValueError:
-        return HttpResponseBadRequest()
-
-    today = datetime.now()
-    birthday_this_year = datetime(
-        year=today.year, month=birthday.month, day=birthday.day)
-    if today < birthday_this_year:
-        # birthday still not passed this year
-        delta = birthday_this_year - today
-    else:
-        # birthday already passed this year
-        birthday_next_year = datetime(
-            year=today.year + 1, month=birthday.month, day=birthday.day)
-        delta = birthday_next_year - today
-    return HttpResponse("Days until next birthday: {}".format(delta.days + 1))
+    pass
 
 
 def profile(request):
@@ -68,8 +43,7 @@ def profile(request):
         'render' function imported from Django.
         Make sure to replace the values inside the template in the proper places.
     """
-    context = {'name': 'Guido van Rossum', 'age': 62}
-    return render(request, 'profile.html', context=context)
+    pass
 
 
 
@@ -104,8 +78,8 @@ AUTHORS_INFO = {
 }
 
 def authors(request):
-    return render(request, 'authors.html', context=AUTHORS_INFO)
+    pass
 
 
 def author(request, authors_last_name):
-    return render(request, 'author.html', context=AUTHORS_INFO[authors_last_name])
+    pass
