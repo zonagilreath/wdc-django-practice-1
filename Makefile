@@ -1,4 +1,4 @@
-.PHONY: runserver migrate shell createsuperuser
+.PHONY: runserver shell
 
 TAG="\n\n\033[0;32m\#\#\# "
 END=" \#\#\# \033[0m\n"
@@ -18,15 +18,3 @@ runserver:
 shell:
 	@echo $(TAG)Running Shell $(END)
 	$(call django-command, shell)
-
-migrate:
-	@echo $(TAG)Migrating Database$(END)
-	$(call django-command, migrate)
-
-makemigrations:
-	@echo $(TAG)Creating Migrations$(END)
-	$(call django-command, makemigrations)
-
-createsuperuser:
-	@echo $(TAG)Create Superuser$(END)
-	$(call django-command, createsuperuser)
