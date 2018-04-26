@@ -5,8 +5,8 @@ END=" \#\#\# \033[0m\n"
 
 HOST=0.0.0.0
 PORT=8080
-PYTHONPATH=django_todos
-DJANGO_SETTINGS=django_todos.settings.dev
+PYTHONPATH=django_practice_1
+DJANGO_SETTINGS=django_practice_1.settings.dev
 
 # django-command = django-admin $(1) $(HOST):$(PORT) --settings $(DJANGO_SETTINGS) --pythonpath $(PYTHONPATH)
 django-command = django-admin $(1) $(2) --settings $(DJANGO_SETTINGS) --pythonpath $(PYTHONPATH)
