@@ -61,12 +61,12 @@ Implement a view under `/profile` URL that renders the `profile.html` sending th
 
 The goal for this task is to practice routing between two URLs.
 You will have:
-    - `/authors` --> contains a list of Authors (template is provided to you)
-    - `/author/<authors_last_name>` --> contains the detail for given author, using the AUTHORS_INFO provided to you.
+* `/authors` --> contains a list of Authors (template is provided to you)
+* `/author/<authors_last_name>` --> contains the detail for given author, using the AUTHORS_INFO provided to you.
 
-First view just have to render the given `authors.html` template sending the AUTHORS_INFO as context.
+- First view just have to render the given `authors.html` template sending the AUTHORS_INFO as context.
 
-Second view has to take the `authors_last_name` provided in the URL, look for for the proper author info in the dictionary, and send it as context while rendering the `author.html` template. Make sure to complete the given `author.html` template with the data that you send.
+- Second view has to take the `authors_last_name` provided in the URL, look for for the proper author info in the dictionary, and send it as context while rendering the `author.html` template. Make sure to complete the given `author.html` template with the data that you send.
 
 <img src="https://user-images.githubusercontent.com/2788551/39314260-3d6cd2f6-494a-11e8-9a05-7533868d64a4.png" width="50%" height="50%">
 
