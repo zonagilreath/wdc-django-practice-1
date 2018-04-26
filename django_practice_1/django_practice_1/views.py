@@ -49,16 +49,12 @@ def next_birthday(request, birthday):
         return HttpResponseBadRequest()
 
     today = datetime.now()
-    birthday_this_year = datetime(
-        year=today.year, month=birthday.month, day=birthday.day)
-    if today < birthday_this_year:
+    upcoming_birthday = birthday.replace(year=today.year)
+    if today > upcoming_birthday:
         # birthday still not passed this year
-        delta = birthday_this_year - today
-    else:
-        # birthday already passed this year
-        birthday_next_year = datetime(
-            year=today.year + 1, month=birthday.month, day=birthday.day)
-        delta = birthday_next_year - today
+        upcoming_birthday = upcoming_birthday.replace(year=today.year + 1)
+
+    delta = upcoming_birthday - today
     return HttpResponse("Days until next birthday: {}".format(delta.days + 1))
 
 
