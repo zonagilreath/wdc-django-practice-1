@@ -33,7 +33,7 @@ Implement a simple view under `/hello-world` URL that returns a 'Hello World' st
 
 Implement a view under `/date` URL that returns a string with current date using the datetime library.
 
-![image](https://user-images.githubusercontent.com/2788551/39313417-53b221e4-4948-11e8-943f-1042b21ad670.png){:height="50%" width="50%"}
+<img src="https://user-images.githubusercontent.com/2788551/39313417-53b221e4-4948-11e8-943f-1042b21ad670.png" width="50%" height="50%">
 
 
 #### 3. my_age view:
