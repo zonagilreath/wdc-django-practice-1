@@ -26,7 +26,7 @@ Running the development server with `$ make runserver`, you'll be able to test y
 
 Implement a simple view under `/hello-world` URL that returns a 'Hello World' string. Use the function `HttpResponse()` imported from Django.
 
-![image](https://user-images.githubusercontent.com/2788551/39313217-de76c182-4947-11e8-8aa8-e69b4e817526.png){:height="50%" width="50%"}
+<img src="https://user-images.githubusercontent.com/2788551/39313217-de76c182-4947-11e8-8aa8-e69b4e817526.png" width="50%" height="50%">
 
 
 #### 2. current_date view:
@@ -40,21 +40,21 @@ Implement a view under `/date` URL that returns a string with current date using
 
 Implement a view under `/my-age/<year>/<month>/<day>` URL that returns a string with the format: "Your age is X years old" based on given /year/month/day that come as parameters.
 
-![image](https://user-images.githubusercontent.com/2788551/39313575-bc4deb34-4948-11e8-81a4-85d681ec5bb7.png){:height="50%" width="50%"}
+<img src="https://user-images.githubusercontent.com/2788551/39313575-bc4deb34-4948-11e8-81a4-85d681ec5bb7.png" width="50%" height="50%">
 
 
 #### 4. next_birthday view:
 
 Implement a view under `/next-birthday/<birthday>` URL where `birthday` parameter is a string with the format "YYYY-MM-DD". The view should calculate the amount of days until next birthday and return a string with the format "'Days until next birthday: XYZ'"
 
-![image](https://user-images.githubusercontent.com/2788551/39313769-3019a1c0-4949-11e8-8688-6184cdbcf187.png){:height="50%" width="50%"}
+<img src="https://user-images.githubusercontent.com/2788551/39313769-3019a1c0-4949-11e8-8688-6184cdbcf187.png" width="50%" height="50%">
 
 
 #### 5. profile view:
 
 Implement a view under `/profile` URL that renders the `profile.html` sending the given dictionary as context. You'll need to use the `render()` function imported from Django. Also make sure to complete the template with the context data in the proper places.
 
-![image](https://user-images.githubusercontent.com/2788551/39314078-ce9bff0a-4949-11e8-9f71-87becbd3baae.png){:height="50%" width="50%"}
+<img src="https://user-images.githubusercontent.com/2788551/39314078-ce9bff0a-4949-11e8-9f71-87becbd3baae.png" width="50%" height="50%">
 
 
 #### 6. authors and author views:
@@ -68,6 +68,6 @@ First view just have to render the given `authors.html` template sending the AUT
 
 Second view has to take the `authors_last_name` provided in the URL, look for for the proper author info in the dictionary, and send it as context while rendering the `author.html` template. Make sure to complete the given `author.html` template with the data that you send.
 
-![image](https://user-images.githubusercontent.com/2788551/39314260-3d6cd2f6-494a-11e8-9a05-7533868d64a4.png){:height="50%" width="50%"}
+<img src="https://user-images.githubusercontent.com/2788551/39314260-3d6cd2f6-494a-11e8-9a05-7533868d64a4.png" width="50%" height="50%">
 
-![image](https://user-images.githubusercontent.com/2788551/39314282-489c6718-494a-11e8-9734-9be58ea9807e.png){:height="50%" width="50%"}
+<img src="https://user-images.githubusercontent.com/2788551/39314282-489c6718-494a-11e8-9734-9be58ea9807e.png" width="50%" height="50%">
