@@ -1,7 +1,7 @@
-### Django practice nº 1
+# Django practice nº 1
 
 
-##### Setup Instruction
+### Setup Instruction
 
 ```bash
 $ mkvirtualenv -p $(which python3) django_practice_1
