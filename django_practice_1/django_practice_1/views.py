@@ -69,9 +69,10 @@ def profile(request):
         Make sure to replace the values inside the template in the proper places.
     """
     context = {
-        'name': 'Guido van Rossum',
-        'age': 62
+        'my_name': 'Guido van Rossum',
+        'my_age': 62
     }
+    
     return render(request, "profile.html", context)
 
 
